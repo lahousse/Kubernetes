@@ -26,17 +26,22 @@ Let’s get started!
 setup
 1.	Download RPI imager (https://www.raspberrypi.com/software/)
 ssd  pc  open RPI imager  chose os  RPI os other  lite  choose storage(your ssd)  write 
+
 ssd  RPI  connect the power  let it boot up, give it a few minutes
+
 ssd  pc  go to your ssd  boot file should be on the ssd (if not you didn’t let the RPI boot up properly so try this again)  open “cmdline.txt”  
 Print the text between the “ after the text line and fill the gaps in between the * in yourself. By typing “ipconfig/all” in your cmd you can find all the info (if you are connected to your wifi) to fill the gaps. Very important: wifi on your laptop needs to be the same as your eth cables.
+
 “
 cgroup_memory=1 cgroup_enable=memory ip=*your ip address of an unused subnet*::*default gateway*:*subnet mask*:*chose a name, has to be different for every node/master*:eth0:off
 ”
+
 save file  open “config.txt”  print “arm_64bit=1” on the bottom of the file
 Open powershell  type the letter your boot assigns this will probably be a I or a D and “:”  print “new-item ssh” 
 Ssd  RPI  eth cable  let it boot up  open cmd on your pc  ping the ip of RPI. “ssh pi@*your master ip*” to enter RPI from your pc  “sudo su -” to get in the root  “sudo iptables -F”  “reboot” 
 “ssh pi@*your master ip*”  “sudo su –“  now we will download K3S 
 “curl -sfl https://get.k3s.io|K3S_KUBECONFIG_MODE=”644” sh -s –“  “kubectl get nodes” to see the nodes  
+
 If you want to add more RPI’s (worker nodes) follow this next step 
 “cat/var/lib/rancher/k3s/server/node-token”  a token will pop up, copy this New cmd  “ssh pi@*your node ip*”  “sudo su –“ 
  “
