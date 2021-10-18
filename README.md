@@ -8,7 +8,7 @@ To explain it in simple words: Kubernetes allows you to create a kind of “cont
 Kubernetes was originally created for the cloud and this version is called K8S. We will use K3S, a lighter and quicker version of Kubernetes which can be installed locally on our RPI.
 You have one master/pilot (Kubernetes uses terms of planes) the rest are nodes (other RPI’s). The master gives out the instructions, let’s the nodes do the work and when done he collects the results. For this project I will be using four RPI’s but it can be done with one RPI. Yes, I said that you need one RPI to be the master and the other ones to be the nodes so logically you would at least need two but you can let it be the master of its own node. 
 
-In this project you will learn to:
+In this project we will:
 -	Setup a Raspberry Pi (RPI) headless
 -	Install Kubernetes locally (K3S)
 -	Create K3S cluster
