@@ -12,10 +12,8 @@ In this project we will:
 -	Setup a Raspberry Pi (RPI) headless
 -	Install Kubernetes locally (K3S)
 -	Create K3S cluster
-- create/read a yaml file for the manifest
-- wrap files in docker
-- run a program in Kubernetes
-- extract results
+- create/read a yaml file in python for the manifest
+
 
 Requirements:
 -	Min one RPI
